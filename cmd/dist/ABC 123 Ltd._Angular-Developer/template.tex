@@ -1,0 +1,108 @@
+﻿\documentclass[a4paper, ngerman]{article}
+\usepackage[a4paper,left=2.5cm,right=2.5cm,top=2.5cm,bottom=3.5cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[colorlinks=true,urlcolor=secondary]{hyperref}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{titlesec}
+\usepackage{fontawesome}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+\usepackage{ebgaramond}
+\usepackage[sfdefault]{raleway} % Or lato, montserrat, raleway, bebas-neue
+\renewcommand*\familydefault{\sfdefault}
+
+\definecolor{primary}{RGB}{41,128,185}
+\definecolor{secondary}{RGB}{41,128,185}
+
+\graphicspath{{./Figures}}
+
+\input{data.tex}
+
+
+\pagestyle{fancy}
+% Remove Header
+\renewcommand{\headrulewidth}{0pt}
+
+\titleformat{\section}[block]{\color{primary}\large\sffamily\filcenter}{}{}{}
+
+
+\newcommand{\highlight}[1]{
+    \textcolor{primary}{
+            #1
+        }
+}
+
+\newcommand{\headline}[1]{
+    \centering
+    {
+        \textcolor{primary}{
+            \Huge{
+                \textrm{
+                    \textbf{
+                        #1
+                    }
+                }
+            }
+        }
+    }          
+}
+
+\author{\namerev}
+    
+% Footer
+\fancyfoot{}
+\fancyfoot[C]{
+    \begin{multicols}{3}
+        \begin{itemize}
+            \item[] \href{mailto:\mail}{\faicon{envelope} \mail}   
+            \item[] \href{tel:\phone}{\faicon{mobile} \phoneformatted}
+            \item[] \href{https://linkedin.com/in/\linkedin}{\faicon{linkedin} \linkedin}
+        \end{itemize}
+    \end{multicols}
+}
+
+\begin{document}
+\raggedright
+
+{\scriptsize \textcolor{primary}{\sender}}
+{\scriptsize \vspace{\baselineskip}}
+
+{
+% \small
+    \address
+}
+
+\bigskip
+\bigskip
+\bigskip
+
+% Headline
+\raggedleft
+{\footnotesize\today}
+\bigskip
+
+\section*{Application for \position}
+\bigskip
+\bigskip
+\raggedright
+\text
+
+
+\bigskip
+\bigskip
+\bigskip
+
+\begin{multicols*}{2}
+    \begin{minipage}{15cm}
+        Kind regards,
+    
+        \includegraphics[width=0.3\textwidth,clip]{signature}
+    
+        \name
+    \end{minipage}
+
+\end{multicols*}
+\end{document}

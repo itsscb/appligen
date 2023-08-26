@@ -1,0 +1,34 @@
+firstname: John
+lastname: Doe
+street: Main Street 1
+city: Los Angeles
+zip: AB0987
+email: j.d@example.com
+phone: 004912345678910
+phoneformatted: +49 123 45678910
+linkedin: jd
+applications: 
+  - company: Example Company Ltd.
+    street: Main Street 2
+    zip: CD1234
+    city: New York
+    country: United States of America
+    position: Golang Developer
+    text: |
+      Dear Sir or Madam,
+
+      I would like to apply to the job of the Golang Developer.
+
+      Please let me know when I can start.
+  - company: ABC 123 Ltd.
+    street: Main Street 3
+    zip: DE5678
+    city: Miami
+    country: United States of America
+    position: Angular Developer
+    text: |
+      Dear Sir or Madam,
+
+      I would like to apply to the job of the Golang Developer.
+
+      Please let me know when I can start.
